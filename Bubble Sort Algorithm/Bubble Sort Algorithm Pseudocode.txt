@@ -1,0 +1,45 @@
+	
+	//STEP 0: Initialize base address for data memory (x10)
+	base_addr = 0x00000000
+
+	//STEP 1: Initialize array values in memory
+	//        Array = [7, 2, 9, 4]
+
+	memory[0] = 7
+	memory[1] = 2
+	memory[2] = 9
+	memory[3] = 4
+
+	//STEP 2: Initialize loop variables
+	limit  = 3  	 # last outer-loop index (3)
+	i      = 0       # outer loop counter
+
+	//STEP 3–8: Bubble Sort (descending order)
+	while i < limit:
+		j = 0                    # inner loop counter
+		last = limit - i         # inner loop upper bound
+
+		while j < last:
+			#STEP 5: Load array[j] and array[j+1]
+			val_j     = memory[j]
+			val_next  = memory[j + 1]
+
+			#STEP 6: Compare and swap (descending order)
+			if val_j < val_next:       # swap only if j < j+1
+				memory[j]     = val_next
+				memory[j + 1] = val_j
+
+			#STEP 7: Increment inner index
+			j = j + 1
+
+		#STEP 8: Increment outer index
+		i = i + 1
+
+	//STEP 9: Sorting complete (no real halt in RV32I)
+	halt
+	
+	
+	
+
+
+

@@ -1,0 +1,33 @@
+	// STEP 0: base address
+	base = 0x00000000
+
+	// STEP 1: initialize array in memory
+	A[0] = 8
+	A[1] = -21
+	A[2] = 15
+	A[3] = -3
+	A[4] = 42
+	A[5] = 17
+
+	// STEP 2: initialize loop variables
+	max = A[0]
+	i = 1
+	N = 6
+
+	// STEP 3–7: loop through array
+	while i < N:
+
+		// load A[i]
+		current = A[i]
+
+		// update max if needed
+		if current > max:
+			max = current
+
+		// increment index
+		i = i + 1
+
+	// STEP 8: store final max in A[6]
+	A[6] = max
+
+

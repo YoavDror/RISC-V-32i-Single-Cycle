@@ -1,0 +1,39 @@
+	//STEP 0: Initialize base address for data memory (x10)
+	base_addr = 0x00000000
+
+	//STEP 1: Initialize first two Fibonacci numbers
+	fib_0 = 0      # stored in x11
+	fib_1 = 1      # stored in x12
+
+
+	//STEP 2: Store fib[0] and fib[1] into memory
+	memory[0] = fib_0
+	memory[1] = fib_1
+
+
+	//STEP 3: Loop setup
+	i = 2          # next Fibonacci index
+	limit = 10     # compute up to fib[9]  (10 terms total)
+
+
+	//STEP 4–6: Loop — compute Fibonacci numbers and store them
+	while i < limit:
+
+		# STEP 4: Compute next Fibonacci number
+		fib_n = fib_0 + fib_1
+
+		# Store fib[i] into memory
+		memory[i] = fib_n
+
+		# STEP 5: Update previous two Fibonacci values
+		fib_0 = fib_1
+		fib_1 = fib_n
+
+		# STEP 6: Increment index
+		i = i + 1
+
+
+	//STEP 7: Program end (no real halt in RV32I)
+	halt
+
+

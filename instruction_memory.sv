@@ -17,7 +17,7 @@ module instruction_memory #(
   logic [DATA_WIDTH-1:0] mem [0:(2**ADDR_WIDTH)-1];
 
   initial begin
-	$readmemh("/*Enter your file name file*/.mem", mem); // Initialize ROM with data
+	$readmemh("machine_code.mem", mem); // Initialize ROM with data
   end
   // --------------------------------------------------------
   // Read Logic
