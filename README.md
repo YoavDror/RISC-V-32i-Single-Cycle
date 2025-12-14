@@ -2,6 +2,9 @@
 
 This repository contains a complete **single-cycle RISC-V 32I processor**, designed and implemented in **SystemVerilog**.
 
+It is part of a **full, end-to-end course** that walks through the complete design of a RISC-V 32I single-cycle processor — from instruction decoding to running real programs on the processor.
+[**Mastering RISC-V in SystemVerilog**](https://www.udemy.com/course/mastering-risc-v-in-systemverilog-from-isa-to-working-cpu/?referralCode=0C6B1EA5C386DF52A99F)
+
 ---
 
 ## Project Goals
